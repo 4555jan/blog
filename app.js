@@ -75,7 +75,7 @@ app.post("/compose", function (req, res) {
   });
 });
 
-app.get("/posts/:postName",function(req,res){
+app.get("/pos/:postName",function(req,res){
   const reqtitle=req.params.postName;
 
   posts.forEach(function(post){

@@ -10,7 +10,13 @@ db.serialize(() => {
   );
 
 
- 
+  db.run("DELETE FROM posts", (err) => {
+    if (err) {
+      console.error(err);
+    } else {
+      console.log("All data deleted successfully!");
+    }
+  });
 });
 
 
