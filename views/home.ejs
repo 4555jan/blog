@@ -1,0 +1,18 @@
+<%- include("partials/header");-%>
+<h1>home</h1>
+<P><%= locals.adj %></P>
+<% posh.forEach(function(post){ %>
+    <h1> <%= post.tits %></h1>
+    <p>
+    <%= post.mads.substring(0,100) %>
+    <a href="/posts/<%= post.tits %>">readmore</a>
+    </p>
+    
+<% }) %>
+
+<form action="/create" method="POST">
+    <button type="submit" name="create">create</button>
+</form>
+<form action="/userposts" method="POST">
+    <button type="submit" name="create">readblog</button>
+</form>
